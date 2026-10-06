@@ -1,0 +1,4 @@
+# 在安装 requirements.txt 后单独执行：
+# python -m pip install -r requirements-gpu.txt
+--index-url https://download.pytorch.org/whl/cu130
+torch==2.12.1

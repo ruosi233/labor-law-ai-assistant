@@ -1,0 +1,13 @@
+.venv/
+.downloads/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.idea/
+*.log
+chroma_db/
+models/
+.streamlit/

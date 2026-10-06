@@ -1,0 +1,15 @@
+langgraph>=1.2,<2.0
+langchain>=1.2,<2.0
+langchain-openai>=1.1,<2.0
+langchain-chroma>=1.0,<2.0
+langchain-huggingface>=1.2,<2.0
+langchain-text-splitters>=1.1,<2.0
+chromadb>=1.4,<2.0
+sentence-transformers>=5.2,<6.0
+modelscope>=1.39,<2.0
+streamlit>=1.53,<2.0
+pydantic-settings>=2.12,<3.0
+beautifulsoup4>=4.14,<5.0
+requests>=2.32,<3.0
+python-dateutil>=2.9,<3.0
+pytest>=9.0,<10.0
