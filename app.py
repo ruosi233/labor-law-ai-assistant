@@ -20,8 +20,6 @@ st.markdown(
     """
     <style>
     .block-container {max-width: 1050px; padding-top: 2rem;}
-    .status-card {padding: .75rem 1rem; border: 1px solid #e5e7eb;
-                  border-radius: .75rem; background: #f8fafc;}
     </style>
     """,
     unsafe_allow_html=True,
@@ -48,16 +46,13 @@ agent = get_agent()
 
 with st.sidebar:
     st.header("运行状态")
-    st.markdown(
-        f"""
-        <div class="status-card">
-        <b>向量模型</b><br>{settings.embedding_model}<br><br>
-        <b>计算设备</b><br>{settings.embedding_device.upper()}<br><br>
-        <b>大模型</b><br>{settings.llm_model if settings.llm_api_key else '未配置，使用本地降级模式'}
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    with st.container(border=True):
+        st.markdown("**向量模型**")
+        st.write(settings.embedding_model)
+        st.markdown("**计算设备**")
+        st.write(settings.embedding_device.upper())
+        st.markdown("**大模型**")
+        st.write(settings.llm_model if settings.llm_api_key else "未配置，使用本地降级模式")
     st.button("新建会话", use_container_width=True, on_click=reset_conversation)
     st.divider()
     st.caption("知识库范围：仅《中华人民共和国劳动合同法》")
@@ -102,4 +97,3 @@ if st.session_state.last_trace:
     with st.expander("本轮 Agent 执行步骤"):
         for index, step in enumerate(st.session_state.last_trace, start=1):
             st.write(f"{index}. {step}")
-
