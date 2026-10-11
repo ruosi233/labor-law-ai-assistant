@@ -2,6 +2,20 @@
 
 基于 Python、LangGraph、LangChain、BGE 中文向量模型和 Chroma 构建。
 
+## 项目截图
+
+### 项目首页
+
+展示运行配置、示例问题与聊天入口。
+
+![劳动用工法律 AI 助手首页](docs/images/project-home.png)
+
+### 法律概念问答与执行步骤
+
+以“什么是无固定期限劳动合同？”为例，展示概念问答以及 LangGraph 的 `direct` 分支执行记录。
+
+![法律概念问答与 Agent 执行步骤](docs/images/concept-qa.png)
+
 ## 当前能力
 
 - 《中华人民共和国劳动合同法》98 条法规已结构化，每条记录包含法规名称、条文号和法条原文。
